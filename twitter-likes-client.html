@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    RED.nodes.registerType('twitter-likes-client',{
+        category: 'config',
+        defaults: {
+            name: {value: ""},
+            consumer_key: {value: ""},
+            consumer_secret: {value: ""},
+            access_token_key: {value: ""},
+            access_token_secret: {value: ""}
+        },
+        label: function() {
+            return this.name || "Twitter credentials";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="twitter-likes-client">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-consumer_key"><i class="fa fa-lock"></i> Consumer Key</label>
+        <input type="text" id="node-config-input-consumer_key">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-consumer_secret"><i class="fa fa-lock"></i> Consumer Secret</label>
+        <input type="text" id="node-config-input-consumer_secret">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-access_token_key"><i class="fa fa-lock"></i> Access Token Key</label>
+        <input type="text" id="node-config-input-access_token_key">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-access_token_secret"><i class="fa fa-lock"></i> Access Token Secret</label>
+        <input type="text" id="node-config-input-access_token_secret">
+    </div>
+</script>
